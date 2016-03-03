@@ -1,0 +1,8 @@
+
+1. 테스트로 발송 해 보시려면, push.module.ModuleTesting 의 main 메서드를 이용하세요.
+
+
+2. APNS 발송은 JDK 1.7 의 경우 SSL CONNECTION 문제가 발생할수 있습니다.
+	JDK 1.6 버전을 이용해 주세요.
+	꼭 JDK 1.7 을 사용 해야한다면, 인터넷에서 keytool 을 검색해서 적용해보세요.
+	

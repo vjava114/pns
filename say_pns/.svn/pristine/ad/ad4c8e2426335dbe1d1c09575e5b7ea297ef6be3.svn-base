@@ -1,0 +1,40 @@
+package com.push.say.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.push.say.mybatis.SqlMapSessionFactory;
+import com.push.say.vo.TestVo;
+
+public class TestDao {
+ 
+    private TestDao() {}
+     
+    private static TestDao dao;
+     
+    public static TestDao getInstance(){
+        if(dao == null){
+            dao = new TestDao();
+        }
+         
+        return dao;
+    }
+     
+    SqlSessionFactory factory = SqlMapSessionFactory.getSqlSessionFactory();
+     
+    public List<Object> selectTest(String mem_id) {
+        SqlSession session = factory.openSession();
+        List<Object> list = new ArrayList<Object>();
+        
+        list= session.selectList("test.selectMember");
+        session.close();
+         
+        return list;
+    }
+ 
+ 
+     
+}

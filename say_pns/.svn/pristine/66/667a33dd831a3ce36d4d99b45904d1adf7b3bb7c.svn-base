@@ -1,0 +1,20 @@
+package com.push.say.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.push.say.service.TestService;
+
+public class TestController {
+
+	public static void main(String[] args) {
+		TestService t = TestService.getInstance();
+		List list = new ArrayList();
+		list = t.selectMember("");
+		
+		for (Object object : list) {
+			System.out.println(object.toString());
+		}
+		
+	}
+}

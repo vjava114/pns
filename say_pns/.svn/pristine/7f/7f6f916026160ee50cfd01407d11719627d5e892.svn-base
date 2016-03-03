@@ -1,0 +1,11 @@
+## database connection property.
+#driver=oracle.jdbc.driver.OracleDriver
+#url=jdbc:oracle:thin:@localhost:\uD3EC\uD2B8\uBC88\uD638:xe
+#username=username
+#password=password
+
+
+ driver=org.gjt.mm.mysql.Driver
+ url=jdbc:mysql://220.95.212.110:3306/push
+ username=rcs
+ password=rcs123
